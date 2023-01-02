@@ -7,7 +7,7 @@ function Statistics() {
     <div className="bg-gray-100">
       <section className="bg-gray-100  px-8 pt-16 pb-24 sm:pt-12 sm:pb-28 sm:px-10 2xl:max-w-7xl mx-auto 2xl:px-0">
         <div className="text-center mb-16 flex flex-col justify-start items-center">
-          <h2 className="text-gray-700 text-lg font-bold md:text-3xl">
+          <h2 className="text-gray-700 text-xl font-bold md:text-3xl">
             Advanced Statistics
           </h2>
           <p className="my-2 text-gray-300 text-sm font-medium text-center md:max-w-xl sm:text-xl">

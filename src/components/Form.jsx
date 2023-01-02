@@ -1,8 +1,13 @@
 import ShortenDesktop from "../assets/Icons/bg-shorten-desktop.svg";
 import ShortenMobile from "../assets/Icons/bg-boost-mobile.svg";
 import { Formik } from "formik";
+import axios from "axios";
 
-function Form() {
+function Form({ setAdded, Added }) {
+  // const axios = require('axios');
+
+  const baseURL = "https://api.shrtco.de/v2";
+
   return (
     <section className="px-6 py-4 sm:py-5 sm:px-10 2xl:max-w-7xl mx-auto 2xl:px-0">
       <div
@@ -10,24 +15,41 @@ function Form() {
         style={{ backgroundImage: `url(${ShortenDesktop})` }}
       >
         <Formik
-          initialValues={{ email: ""}}
+          initialValues={{ link: "" }}
           validate={(values) => {
             const errors = {};
-            if (!values.email) {
-             errors.email = "Please add a link"
-            }else if (
-                !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-              ) {
-                errors.email = 'Invalid email address';
-              }
-           
+            if (!values.link) {
+              errors.link = "Please add a link";
+            } else if (
+              !/^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/i.test(
+                values.link
+              )
+            ) {
+              errors.link = "Invalid link address";
+            }
+
             return errors;
           }}
           onSubmit={(values, { setSubmitting }) => {
-            setTimeout(() => {
-              alert(JSON.stringify(values, null, 2));
-              setSubmitting(false);
-            }, 400);
+            let value = JSON.stringify(values.link, null, 2);
+            value = value.slice(1, -1);
+
+            axios.post(`${baseURL}/shorten?url=${value}`).then((response) => {
+              alert(JSON.stringify(response.data.result.short_link2));
+
+              const storedValue = {
+                originalLink: response.data.result.original_link,
+                shortLink: response.data.result.full_short_link2,
+              };
+
+              let internalLinks = JSON.parse(localStorage.getItem("links"))
+                ? JSON.parse(localStorage.getItem("links"))
+                : [];
+              internalLinks.push(storedValue);
+              localStorage.setItem("links", JSON.stringify(internalLinks));
+              setAdded(!Added);
+              values.link = "";
+            });
           }}
         >
           {({
@@ -46,19 +68,24 @@ function Form() {
             >
               <div className={"flex flex-col gap-2 w-full text-red-500"}>
                 <input
-                  type="email"
-                  name="email"
+                  type="text"
+                  name="link"
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  value={values.email}
+                  value={values.link}
                   placeholder="Shorten a link here..."
-                  className={"bg-white text-Gray w-full rounded-md px-4 py-2 outline-none " + (errors.email && touched.email && errors.email ? 'border-2 border-red-500 text-red-500' : '')}
+                  className={
+                    "bg-white text-Gray w-full rounded-md px-4 py-2 outline-none " +
+                    (errors.link && touched.link && errors.link
+                      ? "border-2 border-red-500 text-red-500"
+                      : "")
+                  }
                 />
-                {errors.email && touched.email && errors.email}
+                {errors.link && touched.link && errors.link}
               </div>
               <button
                 type="submit"
-                disabled={isSubmitting}
+                // disabled={isSubmitting}
                 className="px-4 py-1 h-11 rounded-md bg-Cyan hover:bg-cyan-500 text-white whitespace-nowrap hover:text-cyan-100"
               >
                 Shorten It!
