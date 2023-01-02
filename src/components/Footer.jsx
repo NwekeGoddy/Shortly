@@ -18,24 +18,24 @@ function Footer() {
 
       {/* Footer Links */}
       <div className="flex flex-col justify-center items-center gap-2 text-center md:text-left md:flex-row md:items-start md:justify-start md:gap-12">
-        <div>
-          <h2 className="mb-3 font-bold">Features</h2>
+        <div className="mb-2">
+          <h2 className="mb-2  font-bold">Features</h2>
           <ul>
             <li className="hover:text-cyan-600 pb-1 cursor-pointer">Link Shortening</li>
             <li className="hover:text-cyan-600 pb-1 cursor-pointer">Branded Links</li>
             <li className="hover:text-cyan-600 pb-1 cursor-pointer">Analytics</li>
           </ul>
         </div>
-        <div >
-          <h2 className="mb-3 font-bold">Reasources</h2>
+        <div  className="mb-2">
+          <h2 className="mb-2 font-bold">Reasources</h2>
           <ul>
             <li className="hover:text-cyan-600 pb-1 cursor-pointer">Blog</li>
             <li className="hover:text-cyan-600 pb-1 cursor-pointer">Developers</li>
             <li className="hover:text-cyan-600 pb-1 cursor-pointer">Support</li>
           </ul>
         </div>
-        <div>
-          <h2 className="mb-3 font-bold">Company</h2>
+        <div className="mb-2">
+          <h2 className="mb-2 font-bold">Company</h2>
           <ul>
             <li className="hover:text-cyan-600 pb-1 cursor-pointer">About</li>
             <li className="hover:text-cyan-600 pb-1 cursor-pointer">Our Team</li>

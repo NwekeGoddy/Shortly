@@ -3,6 +3,7 @@ import Footer from './components/Footer'
 import Hero  from './components/Hero'
 import Form  from './components/Form'
 import Boost  from './components/Boost'
+import Statistics  from './components/Statistics'
 import './App.css'
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <Hero />
       <Form />
+      <Statistics />
       <Boost />
       <Footer />
     </div>
