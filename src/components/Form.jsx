@@ -35,11 +35,12 @@ function Form({ setAdded, Added }) {
             value = value.slice(1, -1);
 
             axios.post(`${baseURL}/shorten?url=${value}`).then((response) => {
-              alert(JSON.stringify(response.data.result.short_link2));
+              // alert(JSON.stringify(response.data.result.short_link2));
 
               const storedValue = {
                 originalLink: response.data.result.original_link,
                 shortLink: response.data.result.full_short_link2,
+                copied: false
               };
 
               let internalLinks = JSON.parse(localStorage.getItem("links"))
