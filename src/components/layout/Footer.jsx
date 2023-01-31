@@ -1,4 +1,4 @@
-import EstateManageLogo from "../assets/Icons/EstateManageLogo.png";
+import EstateManageLogo from "../../assets/Icons/EstateManageLogo.png";
 import { IconContext } from "react-icons";
 import { BsLinkedin } from "react-icons/bs";
 import { FaFacebookSquare } from "react-icons/fa";

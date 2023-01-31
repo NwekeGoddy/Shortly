@@ -48,7 +48,7 @@ const UrlResult = ({ setAdded, Added }) => {
                 key={index}
                 className="mb-3 bg-white flex flex-col rounded-lg md:flex-row md:justify-between md:items-center "
               >
-                <div className="text-DarkViolet border-b-2 border-gray-100 lg:border-0">
+                <div className="text-DarkViolet border-b-2 border-gray-100 md:border-0">
                   <p className="pt-5 px-5 whitespace-nowrap  text-ellipsis overflow-hidden ...">
                     {props.customer.first_name} {props.customer.last_name}
                   </p>
@@ -56,8 +56,8 @@ const UrlResult = ({ setAdded, Added }) => {
                     {props.customer.email}
                   </p>
                 </div>
-                <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
-                  <div className="text-Cyan">
+                <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center ">
+                  <div className="text-Cyan flex flex-col lg:items-end">
                     <p className="pt-5 px-5 ">{props.metadata.message}</p>
                     <p className="pb-5 px-5 ">₦{props.amount / 100}:00</p>
                   </div>

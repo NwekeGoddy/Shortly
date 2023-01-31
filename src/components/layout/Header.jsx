@@ -1,4 +1,4 @@
-import EstateManageLogo from "../assets/Icons/EstateManageLogo.png";
+import EstateManageLogo from "../../assets/Icons/EstateManageLogo.png";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { useState } from "react";
 

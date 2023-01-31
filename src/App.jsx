@@ -1,10 +1,9 @@
-import Header from './components/Header'
-import Footer from './components/Footer'
+import Header from './components/layout/Header'
+import Footer from './components/layout/Footer'
 import Hero  from './components/Hero'
 import Processpayments  from './components/Processpayments'
 import ViewPayments  from './components/ViewPayments'
 import Boost  from './components/Boost'
-import UrlResult  from './components/UrlResult'
 import Statistics  from './components/Statistics'
 import {useState} from 'react'
 
