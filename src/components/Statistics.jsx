@@ -1,6 +1,6 @@
-import BrandRecognition from "../assets/Icons/icon-brand-recognition.svg";
-import DetailedRecords from "../assets/Icons/icon-detailed-records.svg";
-import FullyCustomizable from "../assets/Icons/icon-fully-customizable.svg";
+import ViewStatistics from "../assets/Icons/icon-brand-recognition.svg";
+import { AiOutlineSafety } from "react-icons/ai";
+import { GiNuclearWaste } from "react-icons/gi";
 
 function Statistics() {
   return (
@@ -8,62 +8,58 @@ function Statistics() {
       <section className="bg-gray-100  px-8 pt-16 pb-24 sm:pt-12 sm:pb-28 sm:px-10 2xl:max-w-7xl mx-auto 2xl:px-0">
         <div className="text-center mb-16 flex flex-col justify-start items-center">
           <h2 className="text-gray-700 text-xl font-bold md:text-3xl">
-            Advanced Statistics
+            Easy Estate Managing 
           </h2>
           <p className="my-2 text-gray-300 text-sm font-medium text-center md:max-w-xl sm:text-xl">
-            Track how your links are performing across the web with our advanced
-            statistics dashboard.
+          Comprehensive suite of tools for estate managers to manage payments, tenants, maintenance, financials, and communication efficiently..
           </p>
         </div>
 
         <div className="flex flex-col text-center gap-5 text-black lg:flex-row ">
-
-          {/* BrandRecognition */}
+          {/* View payments */}
           <div className="mt-3 bg-white rounded-xl px-8 py-8 relative flex flex-col justify-center items-center z-20 lg:z-0">
             <div className="w-8 h-2 bg-cyan-400 absolute -right-8 hidden lg:block"></div>
             <div className="p-3 bg-LightPurple rounded-full absolute -top-7 lg:left-8 ">
-              <img src={BrandRecognition} alt="icon-brand-recognition" />
+              <img src={ViewStatistics} alt="Statistics Icons" />
             </div>
             <h2 className="my-4 font-bold text-gray-700 sm:text-2xl  lg:text-left lg:w-full">
-              Brand Recognition
+              View Payments
             </h2>
             <p className="my-2 text-gray-300 text-sm font-medium text-center sm:text-xl  lg:text-left">
-              Boost your brand recognition with each click. Generic links don’t
-              mean a thing. Branded links help instil confidence in your
-              content.
+              Gain insights on residents paid bills, making it easier to track
+              payment and follow up residents who are behind
             </p>
           </div>
 
-          {/* DetailedRecords */}
+          {/*Security Bills */}
           <div className="mt-3 bg-white rounded-xl px-8 py-8 relative flex flex-col justify-center items-center z-10 top-8">
             <div className="hidden w-8 h-2 bg-cyan-400 absolute -right-8 lg:block"></div>
             <div className="w-2 h-12 bg-cyan-400 absolute -top-16 lg:hidden"></div>
 
             <div className="p-3 bg-LightPurple rounded-full absolute -top-7 lg:left-8">
-              <img src={DetailedRecords} alt="icon-brand-recognition" />
+              <AiOutlineSafety size="40px" color="#2acfcf" />
             </div>
             <h2 className="my-4 font-bold text-gray-700 sm:text-2xl lg:text-left lg:w-full">
-              Detailed Records
+              Security Bills
             </h2>
             <p className="my-2 text-gray-300 text-sm font-medium text-center sm:text-xl lg:text-left">
-              Gain insights into who is clicking your links. Knowing when and
-              where people engage with your content helps inform better
-              decisions.
+              Improve way by which residents can easily, quickly and securely pay their
+              security bills online eliminating in-person payments.
             </p>
           </div>
 
-          {/* FullyCustomizable */}
+          {/*Waste Bills */}
           <div className="mt-3 bg-white rounded-xl px-8 py-8 relative flex flex-col justify-center items-center z-0 lg:z-20 top-16">
             <div className="w-2 h-12 bg-cyan-400 absolute -top-16 lg:hidden"></div>
             <div className="p-3 bg-LightPurple rounded-full absolute -top-7 lg:left-8">
-              <img src={FullyCustomizable} alt="icon-brand-recognition" className="w-10" />
+              <GiNuclearWaste size="40px" color="#2acfcf" />
             </div>
             <h2 className="my-4 font-bold text-gray-700 sm:text-2xl lg:text-left lg:w-full">
-              Fully Customizable
+              Waste Bills
             </h2>
             <p className="my-2 text-gray-300 text-sm font-medium text-center sm:text-xl lg:text-left">
-              Improve brand awareness and content discoverability through
-              customizable links, supercharging audience engagement.
+              Residents to pay their waste disposal bills in a convenient and
+              secure manner with one of the best paymwnt platform avaliable.
             </p>
           </div>
         </div>

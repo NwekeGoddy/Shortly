@@ -1,82 +1,108 @@
-import ShortlyLogo from "../assets/Icons/logo2.svg";
+import EstateManageLogo from "../assets/Icons/EstateManageLogo.png";
 import { IconContext } from "react-icons";
+import { BsLinkedin } from "react-icons/bs";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
-import { FaPinterest } from "react-icons/fa";
+import { BsGlobe } from "react-icons/bs";
 import { FaInstagramSquare } from "react-icons/fa";
-
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 function Footer() {
   return (
-    <div className="bg-DarkViolet" >
-    <section className="px-6 py-8 sm:py-8 sm:px-10 2xl:max-w-7xl mx-auto 2xl:px-0 bg-DarkViolet flex flex-col justify-center items-center gap-8 sm:flex-row sm:items-start sm:justify-between">
-      
-      {/* Logo */}
-      <div>
-        <img fill="white" src={ShortlyLogo} alt="ShortlyLogo" />
-      </div>
+    <div className="bg-DarkViolet">
+      <section className="px-6 py-8 sm:py-8 sm:px-10 2xl:max-w-7xl mx-auto 2xl:px-0 bg-DarkViolet flex flex-col justify-center items-center gap-8 sm:flex-row sm:items-start sm:justify-between">
+        {/* Logo */}
+        <div className="w-14">
+          <img fill="white" src={EstateManageLogo} alt="EstateManageLogo" />
+        </div>
 
-      {/* Footer Links */}
-      <div className="flex flex-col justify-center items-center gap-2 text-center md:text-left md:flex-row md:items-start md:justify-start md:gap-12">
-        <div className="mb-2">
-          <h2 className="mb-2  font-bold">Features</h2>
-          <ul>
-            <li className="hover:text-cyan-600 pb-1 cursor-pointer">Link Shortening</li>
-            <li className="hover:text-cyan-600 pb-1 cursor-pointer">Branded Links</li>
-            <li className="hover:text-cyan-600 pb-1 cursor-pointer">Analytics</li>
-          </ul>
+        {/* Footer Links */}
+        <div className="flex flex-col justify-center items-center gap-2 text-center md:text-left md:flex-row md:items-start md:justify-start md:gap-12">
+          <div className="mb-2">
+            <h2 className="mb-2  font-bold">Features</h2>
+            <ul>
+              <AnchorLink href="#processPayments">
+                <li className="hover:text-cyan-600 pb-1 cursor-pointer">
+                  Security Bills
+                </li>
+              </AnchorLink>
+              <AnchorLink href="#processPayments">
+                <li className="hover:text-cyan-600 pb-1 cursor-pointer">
+                  Waste Bills
+                </li>
+              </AnchorLink>
+              <AnchorLink href="#viewPayments">
+                <li className="hover:text-cyan-600 pb-1 cursor-pointer">
+                  View Payments
+                </li>
+              </AnchorLink>
+            </ul>
+          </div>
         </div>
-        <div  className="mb-2">
-          <h2 className="mb-2 font-bold">Reasources</h2>
-          <ul>
-            <li className="hover:text-cyan-600 pb-1 cursor-pointer">Blog</li>
-            <li className="hover:text-cyan-600 pb-1 cursor-pointer">Developers</li>
-            <li className="hover:text-cyan-600 pb-1 cursor-pointer">Support</li>
-          </ul>
-        </div>
-        <div className="mb-2">
-          <h2 className="mb-2 font-bold">Company</h2>
-          <ul>
-            <li className="hover:text-cyan-600 pb-1 cursor-pointer">About</li>
-            <li className="hover:text-cyan-600 pb-1 cursor-pointer">Our Team</li>
-            <li className="hover:text-cyan-600 pb-1 cursor-pointer">Careers</li>
-            <li className="hover:text-cyan-600 pb-1 cursor-pointer">Contact</li>
-          </ul>
-        </div>
-      </div>
 
-{/* Social Links */}
-      <div className="flex gap-3">
-      <div className="">
-          <IconContext.Provider
-            value={{ className: "text-xl text-Gray hover:text-cyan-600" }}
+        {/* Social Links */}
+        <div className="flex gap-3">
+          <a
+            className=""
+            href="https://www.linkedin.com/in/nweke-chidi-a0aa251a5/"
+            target="_blank"
           >
-            <FaFacebookSquare />
-          </IconContext.Provider>
-        </div>
-        <div className="">
-          <IconContext.Provider
-            value={{ className: "text-xl text-Gray hover:text-cyan-600" }}
+            <IconContext.Provider
+              value={{ className: "text-xl text-Gray hover:text-cyan-600" }}
+            >
+              <BsLinkedin />
+            </IconContext.Provider>
+          </a>
+          <a
+            className=""
+            href="https://www.facebook.com/chidi.nweke.735/"
+            target="_blank"
           >
-            <FaTwitter />
-          </IconContext.Provider>
-        </div>
-        <div className="">
-          <IconContext.Provider
-            value={{ className: "text-xl text-Gray hover:text-cyan-600" }}
+            <IconContext.Provider
+              value={{ className: "text-xl text-Gray hover:text-cyan-600" }}
+            >
+              <FaFacebookSquare />
+            </IconContext.Provider>
+          </a>
+          <a
+            className=""
+            href="https://twitter.com/NwekeChidi_G"
+            target="_blank"
           >
-            <FaPinterest />
-          </IconContext.Provider>
-        </div>
-        <div className="">
-          <IconContext.Provider
-            value={{ className: "text-xl text-Gray hover:text-cyan-600" }}
+            <IconContext.Provider
+              value={{ className: "text-xl text-Gray hover:text-cyan-600" }}
+            >
+              <FaTwitter />
+            </IconContext.Provider>
+          </a>
+          <a
+            className=""
+            href="https://nwekechidi.netlify.app/"
+            target="_blank"
           >
-            <FaInstagramSquare />
-          </IconContext.Provider>
+            <IconContext.Provider
+              value={{ className: "text-xl text-Gray hover:text-cyan-600" }}
+            >
+              <BsGlobe />
+            </IconContext.Provider>
+          </a>
+          <a
+            className=""
+            href="https://www.instagram.com/iam_ngoddy/"
+            target="_blank"
+          >
+            <IconContext.Provider
+              value={{ className: "text-xl text-Gray hover:text-cyan-600" }}
+            >
+              <FaInstagramSquare />
+            </IconContext.Provider>
+          </a>
         </div>
+      </section>
+
+      <div className="text-cyan-100 px-8 pb-8 flex text-center items-center justify-center text-sm sm:text-lg">
+        &copy; 2023 All right reserved, Designed and Built by Nweke Chidi
       </div>
-    </section>
     </div>
   );
 }
